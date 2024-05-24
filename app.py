@@ -39,7 +39,7 @@ fig_map = px.choropleth(
     hover_name='Area',
     hover_data={'Year_Middle':False, 'Value_Clean':True},
     color_continuous_scale='ylorrd',
-    title='Insegurança Alimentar Global'
+    title=f'Insegurança Alimentar Global - {selected_year}'
 )
 
 st.plotly_chart(
