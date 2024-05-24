@@ -8,7 +8,7 @@ st.set_page_config(
 )
 
 def load_data():
-    data = pd.read_csv('./streamlit_gpt_prompts/UN_food_security.csv')
+    data = pd.read_csv('UN_food_security.csv')
     item_filter = "Prevalence of severe food insecurity in the total population (percent) (3-year average)"
     filtered_data = data[data['Item'] == item_filter]
     filtered_data['Year_Middle'] = filtered_data['Year'].apply(lambda x: int(x.split('-')[0]) + 1)
